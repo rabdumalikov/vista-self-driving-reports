@@ -1,4 +1,4 @@
-# Report:
+# Report 1:
 
 # Progress:
 
@@ -111,3 +111,12 @@ Results:
 * **Top view:** Find out why in our case the shape of the road always straight.
 * **Road width:** Find a segment where the width is fixed, and try training with such dataset.
 
+-----
+
+# Report 2:
+
+# Progress:
+
+Attempt with pos=`0, 1.375, 0`, quaternions=`0, 0, 0, 1`, and yas=`1`:
+
+<a href="https://www.youtube.com/watch?v=tBy-dTc7zgI"><img src="https://img.youtube.com/vi/tBy-dTc7zgI/0.jpg" alt="How we started"></a>
