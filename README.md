@@ -63,7 +63,7 @@
   </tr>
 </table>
 
-I accidently found parameters for our width and height in vista repo, and tried them. Parameters such as `distortion`, `cx`, `cy`, `fx` and `fy` are really close, but their `quaternion` and `position` are different. In my experiments I tried a lot of variations for `position` and `quaternion` and to see blue line and transformation in parameter `position` y-value should be ~1.5, for `quaternion` the last value should be ~0.99. Otherwise I either wasn't able to see blue line or transformations were wrong or distortion was too severe. 
+I accidently found parameters for our width and height in vista [repo](https://github.com/vista-simulator/vista/tree/1132f711c0889f9778a93efef32ca292576cc424), and tried them. Parameters such as `distortion`, `cx`, `cy`, `fx` and `fy` are really close, but their `quaternion` and `position` are different. In my experiments I tried a lot of variations for `position` and `quaternion` and in order to see the blue line and transformations, in parameter `position` y-value should be ~1.5, for `quaternion` the last value should be ~0.99. Otherwise I either wasn't able to see blue line or transformations were wrong or distortion was too severe. 
 
 ```
  <CAMERA Name="camera_front" Type="gmsl">
@@ -84,8 +84,30 @@ I accidently found parameters for our width and height in vista repo, and tried 
  </CAMERA>
 ```
 
-I also wrote an email to Alexandle Amini, but he didn't respond yet. I also found that 
+Results:
 
-# Plan: 
+<a href="https://www.youtube.com/watch?v=ozMPMzn5cEw"><img src="https://img.youtube.com/vi/ozMPMzn5cEw/0.jpg" alt="How we started"></a>
+
+* I also wrote an email to Alexandle Amini, but he didn't respond yet. I also found that 
+* They are using `max_curvature` as hyperparameter, so I found this value in the rosbag which equal to `0.15`. Used that but didn't get visible improvements.
 
 # Problem: 
+* In vista they are specifying `road width` to identify when the car outside the road. In their dataset the road width is the same. However, in our case width of the road varies. On top of that, there are moments when our car not going along the center of the road. This might be potential problem for us as well.
+* Top view in our and vista case differs. For some reason, in our case the top view show that the road always straight, however in vista case the shape of the road is accurate. This also might be source of problems. 
+* Here they are specifying `wheel_base` and `steering_ratio`. Do you think it is important?
+  ```
+  car = world.spawn_agent(
+    config={
+        'length': 5.,
+        'width': 2.,
+        'wheel_base': 2.78,
+        'steering_ratio': 14.7,
+        'lookahead_road': True
+    })
+  ```
+
+# Plan: 
+* **Clarification:** I think it would be better to create an issue on their repo, and clarify all the details there.
+* **Top view:** Find out why in our case the shape of the road always straight.
+* **Road width:** Find a segment where the width is fixed, and try training with such dataset.
+
