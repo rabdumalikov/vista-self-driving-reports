@@ -63,6 +63,29 @@
   </tr>
 </table>
 
+I accidently found parameters for our width and height in vista repo, and tried them. Parameters such as `distortion`, `cx`, `cy`, `fx` and `fy` are really close, but their `quaternion` and `position` are different. In my experiments I tried a lot of variations for `position` and `quaternion` and to see blue line and transformation in parameter `position` y-value should be ~1.5, for `quaternion` the last value should be ~0.99. Otherwise I either wasn't able to see blue line or transformations were wrong or distortion was too severe. 
+
+```
+ <CAMERA Name="camera_front" Type="gmsl">
+    <PROPERTY Name="Model" Value="pinhole"/>
+    <PROPERTY Name="Quaternion" Value="0, 0, -0.035265025029250387, 0.9996807883070832"/>
+    <PROPERTY Name="Position" Value="0, 1.6, 0"/>
+    <PROPERTY Name="Yaw" Value="0.05"/>
+    <PROPERTY Name="params" Value=""/>
+    <PROPERTY Name="width" Hint="intrinsic" Value="1920"/>
+    <PROPERTY Name="height" Hint="intrinsic" Value="1208"/>
+    <PROPERTY Name="distortion" Hint="intrinsic" Value="-0.29318516, 0.06609604, -0.00103823, -0.0016309, 0."/>
+    <PROPERTY Name="cx" Hint="intrinsic" Value="982.06345972"/>
+    <PROPERTY Name="cy" Hint="intrinsic" Value="617.04862261"/>
+    <PROPERTY Name="fx" Hint="intrinsic" Value="942.21001829"/>
+    <PROPERTY Name="fy" Hint="intrinsic" Value="942.91483399"/>
+    <PROPERTY Name="roi" Hint="region_of_interest" Value="590, 520, 950, 1440"/>
+    <PROPERTY Name="roi_angle" Hint="angle of ROI" Value="0"/>
+ </CAMERA>
+```
+
+I also wrote an email to Alexandle Amini, but he didn't respond yet. I also found that 
+
 # Plan: 
 
 # Problem: 
