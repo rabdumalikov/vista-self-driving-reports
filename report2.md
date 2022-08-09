@@ -23,5 +23,5 @@ Here ground truth drive with `link3`, which also eventually drifts away from the
 Seems like drifting away from the road is not a problem. But `quaternions` values seem to be a major source of problems. Since training is so sensitive that even fails with the vista dataset.
 
 # Plan:
-
-
+I created an [issue](https://github.com/vista-simulator/vista/issues/12) in vista repository regarding "How to computer quaternions?".
+We use quaternions for rotation. And for me, it is a mystery why even a slight deviation affects the training. Maybe you have additional ideas or suggestions?
