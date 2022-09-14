@@ -12,8 +12,8 @@
 ## Ground-Truth:
 <a href="https://www.youtube.com/watch?v=bZELpneieKk"><img src="https://img.youtube.com/vi/bZELpneieKk/0.jpg" alt="How we started"></a>
 
-## PilotNet Nvidia:
-<a href="https://www.youtube.com/watch?v=CXzZMp0EM9o"><img src="https://img.youtube.com/vi/CXzZMp0EM9o/0.jpg" alt="How we started"></a>
+## PilotNet Nvidia duration 3:27:
+<a href="https://www.youtube.com/watch?v=IrB3lfJ73Bw"><img src="https://img.youtube.com/vi/IrB3lfJ73Bw/0.jpg" alt="How we started"></a>
 
 -----
 
@@ -26,5 +26,12 @@
 ## Ground-Truth:
 <a href="https://www.youtube.com/watch?v=yw5W_m6XDOw"><img src="https://img.youtube.com/vi/yw5W_m6XDOw/0.jpg" alt="How we started"></a>
 
-## PilotNet Nvidia:
-<a href="https://www.youtube.com/watch?v=Awo9KTnrqVI"><img src="https://img.youtube.com/vi/Awo9KTnrqVI/0.jpg" alt="How we started"></a>
+## PilotNet Nvidia duration 3:15:
+<a href="https://www.youtube.com/watch?v=dvgowutxJ14"><img src="https://img.youtube.com/vi/dvgowutxJ14/0.jpg" alt="How we started"></a>
+
+
+
+|duration|speed|curvature|yaw_rate|frequency|
+|---|---|---|---|---|
+|3:27|`/current_velocity.twist.linear.x`| - |`/current_velocity.twist.angular.z`|50|
+|3:15|`/ssc/velocity_accel_cov.velocity`|`/ssc/curvature_feedback.curvature`| - |30|
