@@ -53,5 +53,5 @@
 
 |duration|mean|std|speed|curvature|yaw_rate|frequency|
 |---|---|---|---|---|---|---|
-|3:27|3:26|0.4|`/current_velocity.twist.linear.x`| - |`/current_velocity.twist.angular.z`|50|
-|3:15|3:18|1.6|`/ssc/velocity_accel_cov.velocity`|`/ssc/curvature_feedback.curvature`| - |30|
+|3:27|3:26|0.4|`/ssc/velocity_accel_cov.velocity`| - |`/ssc/curvature_feedback.curvature`|30|
+|3:15|3:18|1.6|`/current_velocity.twist.linear.x`|`/current_velocity.twist.angular.z`| - |50|
